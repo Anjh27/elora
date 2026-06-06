@@ -1,22 +1,34 @@
+```javascript
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-function addToCart(product){
-    cart.push(product);
+function addToCart(item){
+    cart.push(item);
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(product + " added to cart!");
+    alert(item + " added to cart!");
 }
 
-function addToWishlist(product){
-    wishlist.push(product);
+function addToWishlist(item){
+    wishlist.push(item);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    alert(product + " added to wishlist!");
+    alert(item + " added to wishlist!");
 }
 
 function showCart(){
-    alert("Cart:\n" + cart.join("\n"));
+    if(cart.length === 0){
+        alert("Your cart is empty.");
+        return;
+    }
+
+    alert("Cart:\n\n" + cart.join("\n"));
 }
 
 function showWishlist(){
-    alert("Wishlist:\n" + wishlist.join("\n"));
+    if(wishlist.length === 0){
+        alert("Your wishlist is empty.");
+        return;
+    }
+
+    alert("Wishlist:\n\n" + wishlist.join("\n"));
 }
+```
