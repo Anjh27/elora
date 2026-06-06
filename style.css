@@ -368,3 +368,29 @@ footer {
         font-size: 16px;
     }
 }
+.categories{
+    background:linear-gradient(
+        135deg,
+        #ffd6e7,
+        #e6ddff,
+        #d9f0ff
+    );
+    padding:90px 30px;
+}
+
+.categories .card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.categories .card h3{
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.categories .card p{
+    margin-bottom:20px;
+}
