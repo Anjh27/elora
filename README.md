@@ -11,7 +11,7 @@ Elora was created with a passion for fashion, creativity, and self-expression. O
 ## Founders
 
 - Jap Ajooni Kour
-- Mannat Kohli
+- Mannat
 
 ## Our Products
 
