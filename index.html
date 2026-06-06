@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,250 +6,87 @@
 <title>ELORA</title>
 
 <style>
-:root{
---pink:#ffd6e7;
---purple:#e6ddff;
---blue:#d9f0ff;
---navy:#1f2a44;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#fafcff;
-color:var(--navy);
+    margin:0;
+    font-family:Arial,sans-serif;
 }
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:white;
-position:sticky;
-top:0;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo{
-font-size:32px;
-font-weight:bold;
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
 }
 
 nav ul{
-display:flex;
-gap:25px;
-list-style:none;
+    display:flex;
+    gap:20px;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
 nav a{
-text-decoration:none;
-color:var(--navy);
-}
-
-.icons{
-font-size:22px;
-display:flex;
-gap:15px;
-cursor:pointer;
+    text-decoration:none;
+    color:black;
 }
 
 .hero{
-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#ffd6e7,#e6ddff,#d9f0ff);
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#ffd6e7,#e6ddff,#d9f0ff);
 }
 
 .hero h1{
-font-size:80px;
+    font-size:60px;
+    margin:0;
 }
 
 .hero p{
-font-size:22px;
-margin:15px 0;
+    font-size:22px;
 }
 
 .btn{
-background:var(--navy);
-color:white;
-padding:15px 30px;
-border-radius:50px;
-text-decoration:none;
-}
-
-section{
-padding:80px 20px;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-button{
-background:var(--navy);
-color:white;
-border:none;
-padding:12px 18px;
-border-radius:12px;
-margin:5px;
-cursor:pointer;
-}
-
-.newsletter{
-background:#e6ddff;
-text-align:center;
-}
-
-.newsletter input{
-padding:12px;
-width:250px;
-border:none;
-border-radius:10px;
-}
-
-footer{
-background:var(--navy);
-color:white;
-text-align:center;
-padding:30px;
+    padding:12px 25px;
+    background:#1f2a44;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<div class="logo">
-    <img src="ELORA.png" alt="ELORA Logo">
-</div>
+    <div class="logo">
+        <img src="ELORA.png" alt="ELORA Logo">
+    </div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#shop">Shop</a></li>
-<li><a href="#founders">Founders</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<div class="icons">
-<span onclick="showWishlist()">❤️</span>
-<span onclick="showCart()">🛒</span>
-</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
 <section class="hero">
-<h1>ELORA</h1>
-<p>Fashion Accessories Designed To Shine</p>
-<a href="#shop" class="btn">Shop Now</a>
+    <h1>ELORA</h1>
+    <p>Fashion Accessories Designed To Shine</p>
+    <a href="#" class="btn">Shop Now</a>
 </section>
-
-<section id="shop">
-<h2>Collections</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>💅 Nails</h3>
-<p>Explore our nail collection.</p>
-<button onclick="addToCart('Nails')">Add To Cart</button>
-<button onclick="addToWishlist('Nails')">Wishlist</button>
-</div>
-
-<div class="card">
-<h3>💎 Jewelry</h3>
-<p>Explore our jewelry collection.</p>
-<button onclick="addToCart('Jewelry')">Add To Cart</button>
-<button onclick="addToWishlist('Jewelry')">Wishlist</button>
-</div>
-
-<div class="card">
-<h3>🧣 Scarves</h3>
-<p>Explore our scarf collection.</p>
-<button onclick="addToCart('Scarves')">Add To Cart</button>
-<button onclick="addToWishlist('Scarves')">Wishlist</button>
-</div>
-
-<div class="card">
-<h3>🎀 Hair Accessories</h3>
-<p>Explore our hair accessories collection.</p>
-<button onclick="addToCart('Hair Accessories')">Add To Cart</button>
-<button onclick="addToWishlist('Hair Accessories')">Wishlist</button>
-</div>
-
-</div>
-</section>
-
-<section id="founders">
-<h2>Meet The Founders</h2>
-<center>
-<p>Jap Ajooni Kour & Mannat Kohli</p>
-</center>
-</section>
-
-<section class="newsletter">
-<h2>Join The Elora Family</h2>
-<input type="email" placeholder="Enter your email">
-<button>Subscribe</button>
-</section>
-
-<footer id="contact">
-<p>© Elora Fashion</p>
-<p>Founded by Jap Ajooni Kour & Mannat Kohli</p>
-</footer>
-
-<script>
-let cart=[];
-let wishlist=[];
-
-function addToCart(product){
-cart.push(product);
-alert(product+" added to cart!");
-}
-
-function addToWishlist(product){
-wishlist.push(product);
-alert(product+" added to wishlist!");
-}
-
-function showCart(){
-alert("Cart:\n"+cart.join("\n"));
-}
-
-function showWishlist(){
-alert("Wishlist:\n"+wishlist.join("\n"));
-}
-</script>
 
 </body>
 </html>
