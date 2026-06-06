@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wishlist - ELORA</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="ELORA.png" alt="ELORA Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nails.html">Nails</a></li>
+            <li><a href="jewelry.html">Jewelry</a></li>
+            <li><a href="scarves.html">Scarves</a></li>
+            <li><a href="hair.html">Hair Accessories</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Your Wishlist</h1>
+        <p>Items you love</p>
+    </section>
+
+    <section id="wishlist-items" class="grid">
+        <!-- Wishlist items will appear here via JavaScript -->
+    </section>
+
+    <footer>
+        <p>© 2026 ELORA</p>
+        <p>Founded by Jap Ajooni Kour & Mannat Kohli</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            let container = document.getElementById('wishlist-items');
+
+            if (wishlist.length === 0) {
+                container.innerHTML = "<p>Your wishlist is empty.</p>";
+            } else {
+                wishlist.forEach(item => {
+                    container.innerHTML += `
+                        <div class="card">
+                            <h3>${item}</h3>
+                        </div>
+                    `;
+                });
+            }
+        };
+    </script>
+
+</body>
+</html>
