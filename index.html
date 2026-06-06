@@ -1,73 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELORA</title>
+<title>ELORA | Fashion Accessories</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo img{
-    height:60px;
-    width:auto;
-    display:block;
-}
-
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-nav a{
-    text-decoration:none;
-    color:black;
-}
-
-.hero{
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#ffd6e7,#e6ddff,#d9f0ff);
-}
-
-.hero h1{
-    font-size:60px;
-    margin:0;
-}
-
-.hero p{
-    font-size:22px;
-}
-
-.btn{
-    padding:12px 25px;
-    background:#1f2a44;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
@@ -76,17 +16,112 @@ nav a{
     </div>
 
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#founders">Founders</a></li>
+        <li><a href="#newsletter">Join Us</a></li>
     </ul>
+
+    <div class="nav-icons">
+        <button onclick="showWishlist()">❤️ Wishlist</button>
+        <button onclick="showCart()">🛒 Cart</button>
+    </div>
 </nav>
 
-<section class="hero">
+<section class="hero" id="home">
     <h1>ELORA</h1>
     <p>Fashion Accessories Designed To Shine</p>
-    <a href="#" class="btn">Shop Now</a>
+    <a href="#collections" class="btn">Explore Collection</a>
 </section>
+
+<section id="collections">
+    <h2>Shop Our Collections</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>💅 Nails</h3>
+            <p>Trendy nail styles for every occasion.</p>
+            <a href="nails.html" class="card-btn">View Collection</a>
+        </div>
+
+        <div class="card">
+            <h3>💎 Jewelry</h3>
+            <p>Elegant pieces crafted to sparkle.</p>
+            <a href="jewelry.html" class="card-btn">View Collection</a>
+        </div>
+
+        <div class="card">
+            <h3>🧣 Scarves</h3>
+            <p>Soft and stylish designs.</p>
+            <a href="scarves.html" class="card-btn">View Collection</a>
+        </div>
+
+        <div class="card">
+            <h3>🎀 Hair Accessories</h3>
+            <p>Complete your look beautifully.</p>
+            <a href="hair.html" class="card-btn">View Collection</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="best-sellers">
+    <h2>Best Sellers</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Rose Gold Necklace</h3>
+            <p>₹999</p>
+            <button onclick="addToWishlist('Rose Gold Necklace')">❤️ Wishlist</button>
+            <button onclick="addToCart('Rose Gold Necklace')">🛒 Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Luxury Silk Scarf</h3>
+            <p>₹799</p>
+            <button onclick="addToWishlist('Luxury Silk Scarf')">❤️ Wishlist</button>
+            <button onclick="addToCart('Luxury Silk Scarf')">🛒 Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="founders">
+    <h2>Meet The Founders</h2>
+
+    <div class="founders-grid">
+
+        <div class="founder-card">
+            <h3>Jap Ajooni Kour</h3>
+            <p>Co-Founder of ELORA</p>
+        </div>
+
+        <div class="founder-card">
+            <h3>Mannat Kohli</h3>
+            <p>Co-Founder of ELORA</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="newsletter">
+    <h2>Join The ELORA Family</h2>
+
+    <p>Get updates on new collections and exclusive offers.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button>Join</button>
+</section>
+
+<footer>
+    <p>© 2026 ELORA</p>
+    <p>Founded by Jap Ajooni Kour & Mannat Kohli</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
+```
