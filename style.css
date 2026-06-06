@@ -255,3 +255,7 @@ width:100%;
 margin-bottom:10px;
 }
 }
+.logo img{
+    height:60px;
+    width:auto;
+}
