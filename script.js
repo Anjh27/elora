@@ -32,3 +32,13 @@ function showWishlist(){
     alert("Wishlist:\n\n" + wishlist.join("\n"));
 }
 ```
+function addToWishlist(productName) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    if (!wishlist.includes(productName)) {
+        wishlist.push(productName);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(productName + " added to your wishlist!");
+    } else {
+        alert(productName + " is already in your wishlist!");
+    }
+}
